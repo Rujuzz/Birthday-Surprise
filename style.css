@@ -1,0 +1,252 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #1b1b3a, #45315e, #815b78);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #f5dce9;
+}
+
+.welcome-screen {
+    padding: 30px;
+    max-width: 700px;
+}
+
+.stars {
+    font-size: 35px;
+    color: #f8d98b;
+    margin-bottom: 25px;
+    letter-spacing: 12px;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 35px;
+    border: 1px solid #f8d98b;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f8d98b;
+    color: #302044;
+}
+
+.birthday-screen {
+    display: none;
+    padding: 30px;
+    max-width: 700px;
+    animation: fadeIn 1.5s ease;
+}
+
+.birthday-screen h1 {
+    color: #f8d98b;
+}
+
+.birthday-note {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrapbook Gallery */
+
+.gallery-screen {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    background: #f3e7d4;
+    color: #514033;
+    border-radius: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.gallery-screen h1 {
+    color: #76513d;
+    font-size: 32px;
+}
+
+.gallery-subtitle {
+    color: #856d5b;
+    margin-bottom: 35px;
+}
+
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 190px));
+    gap: 35px;
+    justify-content: center;
+    align-items: start;
+    padding: 15px;
+}
+
+
+.polaroid {
+    background: white;
+    padding: 12px 12px 20px;
+    width: 190px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease;
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-5deg);
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(5deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+
+.polaroid img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    background: #f5f0e8;
+}
+
+
+.polaroid p {
+    color: #76513d;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+@media (max-width: 500px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Vintage Personal Letter */
+
+.message-screen {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 15px;
+    background: #30251f;
+    animation: fadeIn 1.5s ease;
+}
+
+.letter {
+    max-width: 750px;
+    margin: auto;
+    padding: 45px;
+    background: #f0dfbd;
+    color: #59432e;
+    border: 8px double #a88759;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.letter h1 {
+    font-family: Georgia, serif;
+    color: #76502e;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.magic-decoration {
+    text-align: center;
+    font-size: 28px;
+    color: #9b7540;
+    margin: 15px 0;
+}
+
+.letter-content {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 2;
+    white-space: pre-line;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+    .letter {
+        padding: 22px;
+    }
+
+    .letter h1 {
+        font-size: 25px;
+    }
+
+    .letter-content {
+        font-size: 15px;
+    }
+}
+/* Final Video Surprise */
+
+.video-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    background: #30251f;
+    color: #f0dfbd;
+    animation: fadeIn 1.5s ease;
+}
+
+.video-screen h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.video-screen video {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    border: 5px solid #c5a574;
+    border-radius: 12px;
+}
+
+.video-caption {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
